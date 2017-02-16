@@ -113,7 +113,7 @@ scaleMatrix <- function(x, center.rows = TRUE, center.cols = TRUE,
     }
     x = switch(bad.row.action,
                remove = x[var.r != 0, ],
-               resample = .resample(x, var.r),
+               resample = .resample.rows(x, var.r),
                stop("Unrecognized bad.row.action"))
   }
   return(x)
